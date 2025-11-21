@@ -14,6 +14,7 @@
 4. Kontakty
 
 ## Návrh designu
+<img width="1440" height="1024" alt="One-page web" src="https://github.com/user-attachments/assets/7463bcc5-52c6-4d6e-a52d-4d3dee69181b" />
 
 ## Použité technologie
 - HTML5
