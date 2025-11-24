@@ -17,23 +17,18 @@ header{
     grid-column: first / line2;
 }
 
-@media screen and (max-width: 900px){
-    #logo{
-        width: 40px;
-        height: 40px;
-    }
-}
-
 #infoContainer{
-    width: 100%;
+    width: 75%;
     height: 75%;
-    grid-column:  line2 / midle-line;
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
+#searchBar{
+    width: 90%;
+}
 
 form{
     display: flex;
@@ -46,5 +41,104 @@ img{
 }
 
 input[type = "text"] {
-    height: 20px;
+    height: 22px;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 900px){
+    #logo{
+        width: 40px;
+        height: 40px;
+    }
+
+    header{
+        grid-template-columns: [first] 20% [line2] 60% [midle-line] 20% [end];
+    }
+
+    #searchBar{
+        grid-column: line2 / midle-line;
+    }
+
+    #infoContainer{
+        grid-column: midle-line / end;
+        justify-content: center;
+
+    }
+}
+
+/* ------------MOBILE SIDE MENU-----------*/
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Default: desktop menu visible */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Hamburger menu hidden on desktop */
+.menu-logo {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 900px) {
+  /* Hide desktop menu */
+
+    .navbar{
+        width: 15px;
+        height: 20px;
+
+    }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  /* Show mobile menu icon */
+  .menu-logo {
+    display: block;
+  }
+
+  /* When menu is opened */
+  .nav-links.active {
+    display: flex;
+  }
 }
