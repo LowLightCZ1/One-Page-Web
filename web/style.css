@@ -6,7 +6,9 @@ header{
     width: 100%;
     height: 15vh;
     display: grid;
-    grid-template-columns: [first] 20% [line2] 40% [midle-line] 40% [end];
+    grid-template-columns: [first] 20% [line2] 50% [midle-line] 30% [end];
+    align-items: center;
+    justify-items: center;
 }
 
 #logo{
@@ -24,6 +26,25 @@ header{
 
 #infoContainer{
     width: 100%;
-    height: 85%;
-    grid-column: midle-line / end;
+    height: 75%;
+    grid-column:  line2 / midle-line;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+form{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+input[type = "text"] {
+    height: 20px;
 }
