@@ -1,70 +1,86 @@
 *{
-    font-family: inter;
+  font-family: inter;
 }
 
 header{
-    width: 100%;
-    height: 15vh;
-    display: grid;
-    grid-template-columns: [first] 20% [line2] 50% [midle-line] 30% [end];
-    align-items: center;
-    justify-items: center;
+  width: 100%;
+  height: 15vh;
+  display: grid;
+  grid-template-columns: [first] 20% [line2] 50% [midle-line] 30% [end];
+  align-items: center;
+  justify-items: center;
+  grid-row: first-row / main-row-start;
+  grid-column: first-line / end;
+}
+
+body{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: [first-line] 2% [second-line] 96% [third-line] 2% [end];
+  grid-template-rows: [first-row] 15% [main-row-start] 50% [main-row-end] 2% [space-row]   ;
 }
 
 #logo{
-    width: 60px;
-    height: 60px;
-    grid-column: first / line2;
+  width: 60px;
+  height: 60px;
+  grid-column: first / line2;
 }
 
 #infoContainer{
-    width: 75%;
-    height: 75%;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  width: 75%;
+  height: 75%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 #searchBar{
-    width: 90%;
+  width: 90%;
 }
 
 form{
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 img{
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 input[type = "text"] {
-    height: 22px;
-    width: 100%;
+  height: 22px;
+  width: 100%;
 }
 
 
 @media screen and (max-width: 900px){
-    #logo{
-        width: 40px;
-        height: 40px;
-    }
+  #logo{
+    width: 40px;
+    height: 40px;
+  }
+  header{
+    grid-template-columns: [first] 20% [line2] 70% [midle-line] 10% [end];
+  }
+  #searchBar{
+    grid-column: line2 / midle-line;
+  }
+  #infoContainer{
+    grid-column: midle-line / end;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+}
 
-    header{
-        grid-template-columns: [first] 20% [line2] 60% [midle-line] 20% [end];
-    }
 
-    #searchBar{
-        grid-column: line2 / midle-line;
-    }
-
-    #infoContainer{
-        grid-column: midle-line / end;
-        justify-content: center;
-
-    }
+#mainContainer{
+  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  grid-column: second-line / third-line;
+  grid-row: main-row-start / main-row-end;
 }
 
 /* ------------MOBILE SIDE MENU-----------*/
@@ -115,8 +131,8 @@ input[type = "text"] {
   /* Hide desktop menu */
 
     .navbar{
-        width: 15px;
-        height: 20px;
+      width: 15px;
+       height: 20px;
 
     }
 
