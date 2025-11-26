@@ -17,7 +17,8 @@ body{
   height: 100vh;
   display: grid;
   grid-template-columns: [first-line] 2% [second-line] 96% [third-line] 2% [end];
-  grid-template-rows: [first-row] 15% [main-row-start] 50% [main-row-end] 2% [space-row]   ;
+  grid-template-rows: [first-row] 15% [main-row-start] 50% [main-row-end] 2% [space-row];
+  background-color: #999;
 }
 
 #logo{
@@ -45,12 +46,12 @@ form{
 }
 
 img{
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 input[type = "text"] {
-  height: 22px;
+  height: 27px;
   width: 100%;
 }
 
