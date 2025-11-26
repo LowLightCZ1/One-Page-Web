@@ -17,11 +17,13 @@ body{
   height: 200vh;
   display: grid;
   grid-template-columns: [first-line] 2% [second-line] 96% [third-line] 2% [end];
-  grid-template-rows: [first-row] 15% [main-row-start] 55% [main-row-end] 5% [space-row] 5% [foto-row-start] 20% [foto-row-end];
+  grid-template-rows: [first-row] 15% [main-row-start] 45% [main-row-end] 5% [foto-row-start] 20% [foto-row-end] 3% [footer-row-start] 12% [footer-row-end];
   background-color: #999;
 }
 
 footer{
+  grid-column: first-line / end;
+  grid-row: footer-row-start / footer-row-end;
   width: 100%;
   height: 25vh;
   background-color: #000;
