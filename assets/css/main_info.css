@@ -35,5 +35,19 @@
     width: 50%;
     height: 50%;
     border: 2px solid #000;
-    
+    margin: 15px;
+    box-shadow: 5px 5px 20px #000;
+    overflow: hidden;
+}
+
+.intro{
+    height: 220px;
+    width: 300px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.Engines:hover{
+    cursor: pointer;
 }
