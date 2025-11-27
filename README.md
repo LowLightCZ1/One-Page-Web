@@ -17,7 +17,8 @@ Hajný MAtěj
 4. **Kontakty** - 
 
 ## Návrh designu
-<img width="1440" height="1024" alt="One-page web" src="https://github.com/user-attachments/assets/7463bcc5-52c6-4d6e-a52d-4d3dee69181b" />
+<img width="1440" height="1024" alt="Wireframe - 1" src="https://github.com/user-attachments/assets/8ec21d14-5f21-4a5e-961e-512a5707360c" />
+
 
 ## Použité technologie
 - HTML5
