@@ -70,6 +70,8 @@ input[type = "text"] {
 }
 
 
+
+
 @media screen and (max-width: 900px){
   #logo{
     width: 40px;
@@ -92,94 +94,5 @@ input[type = "text"] {
 }
 
 
-#mainContainer{
-  border: 2px solid #000;
-  width: 100%;
-  height: 100%;
-  grid-column: second-line / third-line;
-  grid-row: main-row-start / main-row-end;
-}
 
-.fotoContainer{
-  border: 2px solid #000;
-  width: 100%;
-  height: 100%;
-  grid-column: second-line / third-line;
-  grid-row: foto-row-start / foto-row-end;
-}
 
-/* ------------MOBILE SIDE MENU-----------*/
-
-.navbar {
-  display: flex;
-  width: 100%;
-  height: 70%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #333;
-  color: white;
-}
-
-.navbar .logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Default: desktop menu visible */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-.nav-links a:hover {
-  background-color: #555;
-  border-radius: 5px;
-}
-
-/* Hamburger menu hidden on desktop */
-.menu-logo {
-  display: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* MOBILE STYLES */
-@media (max-width: 900px) {
-  /* Hide desktop menu */
-
-    .navbar{
-      width: 15px;
-       height: 20px;
-
-    }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  /* Show mobile menu icon */
-  .menu-logo {
-    display: block;
-  }
-
-  /* When menu is opened */
-  .nav-links.active {
-    display: flex;
-  }
-}

@@ -1,0 +1,39 @@
+/* ----- ZÁKLÁDNÍ STYLOVÁNÍ -----*/
+
+.mainContainer{
+  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  grid-column: second-line / third-line;
+  grid-row: main-row-start / main-row-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fotoContainer{
+  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  grid-column: second-line / third-line;
+  grid-row: foto-row-start / foto-row-end;
+}
+
+/* ----- ENGINE STYLES -----*/
+
+.engineContainer{
+    width: 95%;
+    height: 90%;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.Engines{
+    width: 50%;
+    height: 50%;
+    border: 2px solid #000;
+    
+}
