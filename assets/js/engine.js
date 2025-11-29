@@ -7,14 +7,19 @@ fetch('../data/engine.json')
         const div = document.createElement("div");
         div.className = "Engines";
 
-        const intro = document.createElement("div");
-        intro.className = "intro"
+        const ikona = engine.ikona||"fdthdfh"
 
-        intro.innerHTML =`
+        console.log(engine)
+        div.innerHTML = `<img src="${ikona}" class="unity" /> ` ;
+        
+        const info = document.createElement("div");
+        info.className = "info";
+
+        info.innerHTML =`
         <h3>${engine.name}</h3>
         <p>Popis: ${engine.popis}</p>`;
 
-        div.appendChild(intro);
+        div.appendChild(info);
         engineCon.appendChild(div);
         
     });

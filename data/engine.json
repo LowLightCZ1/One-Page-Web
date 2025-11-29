@@ -1,11 +1,13 @@
 [
     {
+        "ikona": "../assets/svg/unity-svgrepo-com.svg",
         "name" : "Unity",
         "popis" : "Engine pro tvorbu 2D i 3D her"
         
     },
 
     {
+        "ikona" : "../assets/svg/unreal-engine-svgrepo-com.svg",
         "name" : "Unreal Engine",
         "popis" : "Engine pro tvorbu hlavně 3D her"
 
