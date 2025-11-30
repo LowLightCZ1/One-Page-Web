@@ -7,6 +7,7 @@ header{
   height: 15vh;
   display: grid;
   grid-template-columns: [first] 1fr [line2] 2fr [midle-line] 1fr [end];
+  grid-template-rows: [first-row] 1fr [end-row] 1fr;
   align-items: center;
   justify-items: center;
   grid-row: first-row / main-row-start;
@@ -83,6 +84,7 @@ input[type = "text"] {
   #searchBar{
     width: 90%;
     grid-column: line2 / midle-line;
+    grid-row: first-row / end-row;
   }
  
   #infoContainer{

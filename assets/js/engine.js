@@ -10,7 +10,7 @@ fetch('../data/engine.json')
         const ikona = engine.ikona||"fdthdfh"
 
         console.log(engine)
-        div.innerHTML = `<img src="${ikona}" class="unity" /> ` ;
+        div.innerHTML = `<img src="${ikona}" class="icon" /> ` ;
         
         const info = document.createElement("div");
         info.className = "info";

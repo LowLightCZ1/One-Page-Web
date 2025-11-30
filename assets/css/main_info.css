@@ -33,20 +33,21 @@
 
 .Engines{
   display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 50%;
   height: 50%;
   border-radius: 15px;
   background: #ccc;
   margin: 15px;
   position: relative;
-  align-items: flex-end;
   transition: 0.4s ease-out;
-  box-shadow: 0px 7px 10px rgba(black, 0.5);
+  z-index: 1;
 }
 
-.Engines:hover {
+/* .Engines:hover {
   transform: translateY(20px);
-}
+} */
 .Engines:hover:before {
   opacity: 1;
 }
@@ -69,7 +70,7 @@
   opacity: 0;
 }
 
-.unity{
+.icon{
   width: 70%;
   height: 70%;
   object-fit: contain;
@@ -97,4 +98,19 @@ p{
 
 .Engines:hover{
   cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .engineContainer{
+    height: 95%;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .Engines{
+    margin: 5px;
+    height: 30%;
+    width: 90%;
+  }
+  
 }
