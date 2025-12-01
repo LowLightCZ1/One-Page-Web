@@ -1,5 +1,6 @@
 *{
   font-family: inter;
+  box-sizing: border-box;
 }
 
 header{
@@ -22,7 +23,6 @@ body{
   grid-template-rows: [first-row] 15% [main-row-start] 45% [main-row-end] 5% [foto-row-start] 20% [foto-row-end] 3% [footer-row-start] 12% [footer-row-end];
   background-color: #999;
   margin: 0px;
-  scroll-behavior: smooth;
 }
 
 footer{
@@ -124,4 +124,18 @@ input[type = "text"] {
     height: 50px;
   }
 }
+
+
+/* ----- BACKROUND -----*/
+/* body{
+  background: linear-gradient(153deg, #ca0000, #a808c5, #541ad0);
+  background-size: 600% 600%;
+  animation: AnimationName 18s ease infinite;
+}
+
+@keyframes AnimationName {
+  0%{background-position:4% 0%}
+  50%{background-position:97% 100%}
+  100%{background-position:4% 0%}
+} */
 
