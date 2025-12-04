@@ -1,7 +1,9 @@
 fetch('../data/engine.json')
 .then(res => res.json())
 .then(data =>{
-    const engineCon = document.getElementById("engineContainer")
+    const engineCon = document.getElementById("infoContainer");
+
+    engineCon.innerHTML = '';
 
     data.forEach(engine => {
         const div = document.createElement("div");
@@ -9,14 +11,13 @@ fetch('../data/engine.json')
 
         const ikona = engine.ikona||"fdthdfh"
 
-        console.log(engine)
         div.innerHTML = `<img src="${ikona}" class="icon" /> ` ;
         
         const info = document.createElement("div");
         info.className = "info";
 
         info.innerHTML =`
-        <h3>${engine.name}</h3>
+        <h3>${engine.name}</h3> 
         <p>Popis: ${engine.popis}</p>`;
 
         div.appendChild(info);

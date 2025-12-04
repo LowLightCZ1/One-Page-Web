@@ -19,8 +19,8 @@ body{
   width: 100%;
   height: 200vh;
   display: grid;
-  grid-template-columns: [first-line] 2% [second-line] 96% [third-line] 2% [end];
-  grid-template-rows: [first-row] 15% [main-row-start] 45% [main-row-end] 5% [foto-row-start] 20% [foto-row-end] 3% [footer-row-start] 12% [footer-row-end];
+  grid-template-columns: [first-line] 1fr [second-line] 40fr [third-line] 1fr [end];
+  grid-template-rows: [first-row] 3fr [main-row-start] 10fr [main-row-end] 2fr [foto-row-start] 5fr [foto-row-end] 1fr [footer-row-start] 3fr [footer-row-end];
   background-color: #999;
   margin: 0px;
 }
@@ -34,8 +34,8 @@ footer{
   width: 100%;
   height: 25vh;
   column-gap: 10px;
+  background-color:#000 ;
 }
-
 
 
 /* ----- HEADER INFO -----*/
@@ -45,7 +45,7 @@ footer{
   grid-column: first / line2;
 }
 
-#infoContainer{
+#headerContainer{
   grid-column: line2 / midle-line;
   width: 75%;
   height: 75%;
@@ -82,7 +82,7 @@ input[type = "text"] {
 /* ----- FOOTER INFO ----- */
 
 .footerInfo{
-  border: 2px solid #000;
+  border: 2px solid #fff;
   width: 100%;
   height: 100%;
   grid-column: footer-start / info-column;
@@ -91,7 +91,7 @@ input[type = "text"] {
 }
 
 .socInfo{
-  border: 2px solid #000;
+  border: 2px solid #fff;
   width: 100%;
   height: 100%;
   grid-column: info-column / footer-end;
@@ -117,7 +117,7 @@ input[type = "text"] {
     grid-row: first-row / end-row;
   }
  
-  #infoContainer{
+  #headerContainer{
     grid-column: midle-line / end;
     justify-content: center;
     width: 50px;
@@ -139,3 +139,8 @@ input[type = "text"] {
   100%{background-position:4% 0%}
 } */
 
+/* -----SCROLL BAR -----*/
+
+::-webkit-scrollbar{
+  width: 0px;
+}

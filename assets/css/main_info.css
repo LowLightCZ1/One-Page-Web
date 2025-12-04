@@ -21,7 +21,7 @@
 
 /* ----- ENGINE STYLES -----*/
 
-.engineContainer{
+.infoContainer{
   width: 95%;
   height: 90%;
   border: 2px solid #000;
@@ -74,9 +74,8 @@
   width: 70%;
   height: 70%;
   object-fit: contain;
-  /* position: absolute;
-  top: 50px;
-  left: 40px; */
+  position: relative;
+  top: 15%;
   border-radius: 15px;
 }
 
@@ -101,7 +100,7 @@ p{
 }
 
 @media screen and (max-width: 900px) {
-  .engineContainer{
+  .infoContainer{
     height: 95%;
     flex-direction: column;
     gap: 5px;

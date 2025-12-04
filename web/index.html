@@ -17,16 +17,16 @@
 <body>
     <header>
         <div id="logo" style="border: 2px solid #000;"></div>
-        <div id="infoContainer" style="border: 2px solid #000;">
+        <div id="headerContainer" style="border: 2px solid #000;">
             <nav class="navbar">
                 <div class="menu-logo" id="menuLogo">
                     ☰
                 </div>
 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#">O nás</a></li>
-                    <li><a href="#">Historie</a></li>
-                    <li><a href="#">Herní Enginy</a></li>
+                    <li><a href="#" class="jsonLink" data-file="../assets/js/about.js">O nás</a></li>
+                    <li><a href="#" class="jsonLink" data-file="../" >Historie</a></li>
+                    <li><a href="#" class="jsonLink" data-file ="../assets/js/engine.js">Herní Enginy</a></li>
                     <li><a href="#">Dotazník</a></li>
                 </ul>
             </nav>
@@ -42,7 +42,7 @@
 
     <div id="mainContainer" class="mainContainer">
 
-        <div id="engineContainer" class="engineContainer">
+        <div id="infoContainer" class="infoContainer">
             
         </div>
 
@@ -62,6 +62,5 @@
     </footer>
 
     <script src="../assets/js/script.js"></script>
-    <script src="../assets/js/engine.js"></script>
 </body>
 </html>
