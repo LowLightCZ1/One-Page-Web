@@ -10,9 +10,11 @@ fetch('../data/about.json')
     
     const info = document.createElement("div");
     info.className = "mainInfo";
+
     info.innerHTML =`
     <h1>${mainInfo.header}</h1> 
     <p>${mainInfo.describe}</p>`;
+    
     div.appendChild(info);
     infoCon.appendChild(div);
         
