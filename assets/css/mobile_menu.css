@@ -4,7 +4,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 15px 20px;
   background-color: #333;
@@ -47,8 +47,8 @@
   /* Hide desktop menu */
 
     .navbar{
-      width: 15px;
-       height: 20px;
+      width: 100%;
+      height: 100%;
 
     }
 
