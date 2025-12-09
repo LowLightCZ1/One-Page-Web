@@ -20,7 +20,7 @@ body{
   height: 200vh;
   display: grid;
   grid-template-columns: [first-line] 1fr [second-line] 40fr [third-line] 1fr [end];
-  grid-template-rows: [first-row] 3fr [main-row-start] 10fr [main-row-end] 2fr [foto-row-start] 5fr [foto-row-end] 1fr [footer-row-start] 3fr [footer-row-end];
+  grid-template-rows: [first-row] 3fr [main-row-start] 12fr [main-row-end] 2fr [foto-row-start] 3fr [foto-row-end] 1fr [footer-row-start] 3fr [footer-row-end];
   background-color: #999;
   margin: 0px;
 }
@@ -99,8 +99,17 @@ input[type = "text"] {
 
 }
 
+h1{
+  text-align: center;
+}
 
 
+.main-info{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
 
 /* ----- MEDIA RESIZE -----*/
 @media screen and (max-width: 900px){

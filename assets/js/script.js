@@ -27,3 +27,26 @@ navlinks.forEach(link => {  // Pro každý prvek provede
   });
 });
 
+// ----- READ MORE BTN ----- ///
+
+
+
+
+function btnFunction(){
+
+  const moreText = document.getElementById("moreText");
+  const btn = document.getElementById("moreBtn"); 
+  if (!btn || !moreText) return;
+
+  if(moreText.style.display === "none"){
+    moreText.style.display = "inline";
+    btn.textContent = "Zobrazit Méně";
+  }
+  else{
+    moreText.style.display = "none";
+    btn.textContent = "Zobrazit Více";
+  }
+};
+
+
+
