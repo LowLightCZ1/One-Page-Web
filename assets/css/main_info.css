@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .fotoContainer{
@@ -45,29 +46,29 @@
   z-index: 1;
 }
 
-/* .Engines:hover {
-  transform: translateY(20px);
-} */
-.Engines:hover:before {
-  opacity: 1;
-}
-.Engines:hover .info {
-  opacity: 1;
-  transform: translateY(0px);
-}
-.Engines:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
-  transition: 0.5s;
-  opacity: 0;
+@media screen and (min-width:900px) 
+{
+  .Engines:hover:before {
+    opacity: 1;
+  }
+  .Engines:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .Engines:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+  }
 }
 
 .icon{
