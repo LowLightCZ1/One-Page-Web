@@ -27,24 +27,34 @@ navlinks.forEach(link => {  // Pro každý prvek provede
   });
 });
 
-// ----- READ MORE BTN ----- ///
+// ----- READ MORE textBtn ----- ///
+
+function engineBtnFunction(){
+  const engineInfo = document.getElementById("engineCon");
+  const engineBtn = document.getElementById("engineBtn");
+  if(!engineBtn || !engineInfo) return;
+
+  engineInfo.style.zIndex = "2";
+  engineInfo.style.height = "100%";
+  engineInfo.style.width = "100%";
+  engineInfo.style.overflow = "visible"
+
+};
 
 
-
-
-function btnFunction(){
+function textBtnFunction(){
 
   const moreText = document.getElementById("moreText");
-  const btn = document.getElementById("moreBtn"); 
-  if (!btn || !moreText) return;
+  const textBtn = document.getElementById("moretextBtn"); 
+  if (!textBtn || !moreText) return;
 
   if(moreText.style.display === "none"){
     moreText.style.display = "inline";
-    btn.textContent = "Zobrazit Méně";
+    textBtn.textContent = "Zobrazit Méně";
   }
   else{
     moreText.style.display = "none";
-    btn.textContent = "Zobrazit Více";
+    textBtn.textContent = "Zobrazit Více";
   }
 };
 

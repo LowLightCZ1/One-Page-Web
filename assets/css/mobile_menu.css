@@ -21,7 +21,7 @@
   list-style: none;
   display: flex;
   gap: 20px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .nav-links a {

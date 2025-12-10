@@ -14,7 +14,7 @@ fetch('../data/about.json')
     info.innerHTML =`
     <h1>${mainInfo.header}</h1> 
     <p class = "mainInfo" id = "mainInfo">${mainInfo.main}</p>
-    <button id="moreBtn" onclick="btnFunction()">Zobrazit více</button>`;
+    <button id="moreBtn" onclick="textBtnFunction()">Zobrazit více</button>`;
     
     div.appendChild(info);
     infoCon.appendChild(div);

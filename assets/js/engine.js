@@ -8,6 +8,7 @@ fetch('../data/engine.json')
     data.forEach(engine => {
         const div = document.createElement("div");
         div.className = "Engines";
+        div.id = "engineCon";
 
         const ikona = engine.ikona||"fdthdfh"
 
@@ -18,7 +19,8 @@ fetch('../data/engine.json')
 
         info.innerHTML =`
         <h3>${engine.name}</h3> 
-        <p>Popis: ${engine.popis}</p>`;
+        <p>Popis: ${engine.popis}</p>
+        <button id="engineBtn" onclick="engineBtnFunction()">Zobrazit více</button>`;
 
         div.appendChild(info);
         engineCon.appendChild(div);
