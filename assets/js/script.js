@@ -29,23 +29,10 @@ navlinks.forEach(link => {  // Pro každý prvek provede
 
 // ----- READ MORE textBtn ----- ///
 
-function engineBtnFunction(){
-  const engineInfo = document.getElementById("engineCon");
-  const engineBtn = document.getElementById("engineBtn");
-  if(!engineBtn || !engineInfo) return;
-
-  engineInfo.style.zIndex = "2";
-  engineInfo.style.height = "100%";
-  engineInfo.style.width = "100%";
-  engineInfo.style.overflow = "visible"
-
-};
-
 
 function textBtnFunction(){
-
   const moreText = document.getElementById("moreText");
-  const textBtn = document.getElementById("moretextBtn"); 
+  const textBtn = document.getElementById("textBtn"); 
   if (!textBtn || !moreText) return;
 
   if(moreText.style.display === "none"){
@@ -56,6 +43,32 @@ function textBtnFunction(){
     moreText.style.display = "none";
     textBtn.textContent = "Zobrazit Více";
   }
+};
+
+function engineBtnFunction(button){
+  //const engineBtn = document.getElementById("engineBtn")
+
+  const engineCard = button.closest(".Engine");
+  const container = engineCard.parentElement;
+  const infoCards = container.querySelectorAll(".Engine");
+
+  const isExpanded = engineCard.classList.contains("expanded");
+
+  if(isExpanded){
+    engineCard.classList.remove("expanded");
+    infoCards.forEach(c => c.style.display = "flex");
+    button.textContent = "Zobrazit více";
+  }
+  else{
+    infoCards.forEach(c => {
+      if (c !== engineCard) c.style.display = 'none';
+    });
+    engineCard.classList.add("expanded")
+    button.textContent = "Zobrazit méně";
+  }
+
+
+
 };
 
 

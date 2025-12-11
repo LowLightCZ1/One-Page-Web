@@ -45,6 +45,11 @@ footer{
   grid-column: first / line2;
 }
 
+.logo{
+  width: 100%;
+  height: 100%;
+}
+
 #headerContainer{
   grid-column: line2 / midle-line;
   width: 75%;
