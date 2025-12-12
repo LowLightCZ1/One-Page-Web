@@ -2,7 +2,7 @@ fetch('../data/survey.json')
 .then(res => res.json())
 .then(surveyInfo =>{
 
-    const surveyCon = document.getElementById("infoContainer");
+    const surveyCon = document.getElementById("mainContainer");
 
     surveyCon.innerHTML = '';
 

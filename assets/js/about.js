@@ -1,12 +1,13 @@
 fetch('../data/about.json')
 .then(res => res.json())
 .then(mainInfo =>{
-    const infoCon = document.getElementById("infoContainer");
+    const infoCon = document.getElementById("mainContainer");
 
     infoCon.innerHTML = '';
 
     const div = document.createElement("div");
     div.className = "About-us";
+    div.id = "aboutUs"
     
     const info = document.createElement("div");
     info.className = "main-info";

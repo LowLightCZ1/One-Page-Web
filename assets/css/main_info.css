@@ -20,18 +20,13 @@
   grid-row: foto-row-start / foto-row-end;
 }
 
-/* ----- ENGINE STYLES -----*/
-
-.infoContainer{
-  position: relative;
-  width: 95%;
-  height: 90%;
-  border: 2px solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 10px;
+@media screen and (max-width: 900px) {
+  .mainContainer{
+    flex-direction: column;
+  }
 }
+
+/* ----- ENGINE STYLES -----*/
 
 .Engine{
   display: flex;
@@ -51,11 +46,10 @@
 
 .Engine.expanded{
   position: absolute;
-  width: 100%;
+  width: 95%;
   height: 100%;
   z-index: 3;
   flex: none;
-
   transform: scale(1.02);
 }
 

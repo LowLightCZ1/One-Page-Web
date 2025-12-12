@@ -1,7 +1,7 @@
 fetch('../data/engine.json')
 .then(res => res.json())
 .then(data =>{
-    const engineCon = document.getElementById("infoContainer");
+    const engineCon = document.getElementById("mainContainer");
 
     engineCon.innerHTML = '';
 

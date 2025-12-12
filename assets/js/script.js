@@ -33,13 +33,18 @@ navlinks.forEach(link => {  // Pro každý prvek provede
 function textBtnFunction(){
   const moreText = document.getElementById("moreText");
   const textBtn = document.getElementById("textBtn"); 
+  const aboutCon = document.getElementById("aboutUs");
   if (!textBtn || !moreText) return;
 
-  if(moreText.style.display === "none"){
+  const isExpanded = moreText.classList.contains("expanded");
+
+  if(moreText.style.display === "none" && !isExpanded){
+    aboutCon.classList.add("expanded")
     moreText.style.display = "inline";
     textBtn.textContent = "Zobrazit Méně";
   }
   else{
+    aboutCon.classList.remove("expanded")
     moreText.style.display = "none";
     textBtn.textContent = "Zobrazit Více";
   }

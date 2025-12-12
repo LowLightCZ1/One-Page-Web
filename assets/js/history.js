@@ -1,7 +1,7 @@
 fetch('../data/history.json')
 .then(res => res.json())
 .then(data =>{
-    const historyCon = document.getElementById("infoContainer");
+    const historyCon = document.getElementById("mainContainer");
 
     historyCon.innerHTML = '';
 
