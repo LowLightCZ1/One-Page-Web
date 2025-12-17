@@ -1,9 +1,11 @@
 fetch('../data/history.json')
 .then(res => res.json())
 .then(data =>{
-    const historyCon = document.getElementById("mainContainer");
+    const section = document.getElementById("mainSec");
 
-    historyCon.innerHTML = '';
+    section.className = "history-section";
+
+    section.innerHTML = '';
 
     data.forEach(historyInfo => {
         const div = document.createElement("div");
@@ -17,7 +19,7 @@ fetch('../data/history.json')
         <p>${historyInfo.main}</p>`;
     
         div.appendChild(info);
-        historyCon.appendChild(div);
+        section.appendChild(div);
     });
     
 })

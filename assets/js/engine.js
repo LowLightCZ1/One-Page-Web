@@ -1,9 +1,11 @@
 fetch('../data/engine.json')
 .then(res => res.json())
 .then(data =>{
-    const engineCon = document.getElementById("mainContainer");
+    const section = document.getElementById("mainSec");
 
-    engineCon.innerHTML = '';
+    section.className = "engine-section";
+
+    section.innerHTML = '';
 
     data.forEach(engine => {
         const div = document.createElement("div");
@@ -23,7 +25,7 @@ fetch('../data/engine.json')
         <button id="engineBtn" onclick="engineBtnFunction(this)">Zobrazit více</button>`;
 
         div.appendChild(info);
-        engineCon.appendChild(div);
+        section.appendChild(div);
         
     });
 })

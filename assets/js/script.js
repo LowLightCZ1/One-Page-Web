@@ -59,10 +59,14 @@ function engineBtnFunction(button){
 
   const isExpanded = engineCard.classList.contains("expanded");
 
+  const section = document.getElementById("mainSec");
+
   if(isExpanded){
     engineCard.classList.remove("expanded");
     infoCards.forEach(c => c.style.display = "flex");
     button.textContent = "Zobrazit více";
+    section.style.width = "auto";
+    section.style.height = "auto";
   }
   else{
     infoCards.forEach(c => {
@@ -70,6 +74,9 @@ function engineBtnFunction(button){
     });
     engineCard.classList.add("expanded")
     button.textContent = "Zobrazit méně";
+    section.style.width = "100%";
+    section.style.height = "100%";
+    section.style.border = "none"
   }
 
 

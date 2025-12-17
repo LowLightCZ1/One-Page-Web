@@ -8,7 +8,7 @@
   grid-row: main-row-start / main-row-end;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 1;
 }
 
@@ -20,13 +20,25 @@
   grid-row: foto-row-start / foto-row-end;
 }
 
-@media screen and (max-width: 900px) {
-  .mainContainer{
+section{
+  border: 2px solid #000;
+  display: flex;
+}
+
+
+
+/* ----- ENGINE STYLES -----*/
+
+@media screen and (max-width:900px) {
+  .engine-section{
     flex-direction: column;
   }
 }
 
-/* ----- ENGINE STYLES -----*/
+.engine-section{
+  justify-content: center;
+  align-items: center;
+}
 
 .Engine{
   display: flex;

@@ -158,3 +158,22 @@ h1{
 ::-webkit-scrollbar{
   width: 0px;
 }
+
+
+/* ----- SEARCH BAR ------*/
+
+.search-bar{
+  background-color: transparent;
+  border: 2px solid #010007;
+  border-radius: 15px;
+}
+
+::placeholder{
+  color: #000;
+  font-weight: bold;
+}
+
+.search-btn{
+  background-color: transparent;
+  border: none;
+}

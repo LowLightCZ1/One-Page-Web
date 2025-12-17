@@ -1,10 +1,11 @@
 fetch('../data/survey.json')
 .then(res => res.json())
 .then(surveyInfo =>{
+    const section = document.getElementById("mainSec");
 
-    const surveyCon = document.getElementById("mainContainer");
+    section.className = "survey-section";
 
-    surveyCon.innerHTML = '';
+    section.innerHTML = '';
 
     const div = document.createElement("div");
     div.className = "surveyInfo";
@@ -19,6 +20,6 @@ fetch('../data/survey.json')
     `;
 
     div.appendChild(info);
-    surveyCon.appendChild(div);
+    section.appendChild(div);
 })
 .catch(error => console.error("Chyba při načítání JSON:", error));

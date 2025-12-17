@@ -1,9 +1,11 @@
 fetch('../data/about.json')
 .then(res => res.json())
 .then(mainInfo =>{
-    const infoCon = document.getElementById("mainContainer");
+    const section = document.getElementById("mainSec");
 
-    infoCon.innerHTML = '';
+    section.className = "about-section";
+
+    section.innerHTML = '';
 
     const div = document.createElement("div");
     div.className = "About-us";
@@ -18,7 +20,7 @@ fetch('../data/about.json')
     <button id="textBtn" onclick="textBtnFunction()">Zobrazit více</button>`;
     
     div.appendChild(info);
-    infoCon.appendChild(div);
+    section.appendChild(div);
         
 
 })
