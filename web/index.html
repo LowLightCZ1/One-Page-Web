@@ -15,11 +15,16 @@
     <title>Herní Enginy</title>
 </head>
 <body>
+    <div class="theme" id="theme">
+        <img src="../assets/svg/sun-svgrepo-com.svg" alt="sun svg" class="theme-icon" id="light">
+        <img src="../assets/svg/moon-svgrepo-com.svg" alt="moon svg" class="theme-icon" id="dark">
+        <input type="checkbox" name="theme" id="themeSwitch">
+    </div>
     <header>
         <div id="logo">
             <img src="../assets/svg/Logo (2).svg" alt="web logo" class="logo">
         </div>
-        <div id="headerContainer" style="border: 2px solid #000;">
+        <div id="headerContainer">
             <section id="headerSec" class="header-sec">
                 <a href="about-us" class="jsonLink" data-file="../assets/js/about.js">O nás</a>
                 <a href="history" class="jsonLink" data-file="../assets/js/history.js" >Historie</a>
@@ -58,6 +63,8 @@
             </section>
         </div>
     </footer>
+
+
 
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/about.js" id="dynamicJsonScript"></script>

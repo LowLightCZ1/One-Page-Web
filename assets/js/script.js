@@ -1,5 +1,5 @@
 
-
+// ----- MOBILE MENU ------//
 
 function mobileNav() {
   const section = document.getElementById("headerSec");
@@ -7,7 +7,12 @@ function mobileNav() {
   const button = document.createElement("button");
   button.className = "closebtn";
 
-  section.appendChild(button);
+
+  if(section.childNodes.length <= 9){
+    section.appendChild(button);
+  }
+
+  console.log(section.childNodes.length)
 
   const isActive = section.classList.contains("active");
 
@@ -20,10 +25,9 @@ function mobileNav() {
     section.classList.remove("active");
     button.remove(button);
   });
+
+
 }
-
-
-
 
 
 // ---- SWITCHING JSON FILES -----//

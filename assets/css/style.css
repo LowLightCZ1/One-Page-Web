@@ -4,7 +4,7 @@
 }
 
 header{
-  width: 100%;
+  width: auto;
   height: 12vh;
   display: grid;
   grid-template-columns: [first] 1fr [line2] 2fr [midle-line] 1fr [end];
@@ -13,6 +13,15 @@ header{
   justify-items: center;
   grid-row: first-row / main-row-start;
   grid-column: first-line / end;
+  background-color: #fff;
+  margin: 1rem 2rem;
+  border-radius: 16px;
+  -webkit-box-shadow: 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 8px;
+  z-index: 1000;
 }
 
 body{
@@ -21,8 +30,9 @@ body{
   display: grid;
   grid-template-columns: [first-line] 1fr [second-line] 40fr [third-line] 1fr [end];
   grid-template-rows: [first-row] 3fr [main-row-start] 12fr [main-row-end] 1fr [foto-row-start] 4fr [foto-row-end] 1fr [footer-row-start] 2fr [footer-row-end];
-  background-color: #999;
   margin: 0px;
+  background: #e6f3ff;
+  background: linear-gradient(-30deg,#e4caed 0%, #e6f3ff 100%);
 }
 
 footer{
@@ -42,6 +52,8 @@ footer{
   width: 60px;
   height: 60px;
   grid-column: first / line2;
+  justify-self: start;
+  margin-left: 2rem;
 }
 
 .logo{
@@ -120,6 +132,8 @@ input[type = "text"] {
     justify-content: center;
     width: 50px;
     height: 50px;
+    margin-right: 2rem;
+    background-color: #fff;
   }
 }
 
@@ -148,8 +162,12 @@ input[type = "text"] {
 
 .search-bar{
   background-color: transparent;
-  border: 2px solid #010007;
   border-radius: 15px;
+  border: none;
+  -webkit-box-shadow: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
 }
 
 ::placeholder{
@@ -161,3 +179,44 @@ input[type = "text"] {
   background-color: transparent;
   border: none;
 }
+
+/* ----- THEME -----*/
+
+.theme{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1001;
+}
+
+#themeSwitch{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1100;
+  margin: 0;
+}
+
+.theme-icon{
+  right: 1rem;
+  bottom: 1rem;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  z-index: 1002;
+}
+
+#light{
+  z-index: 1003;
+}
+
+#dark{
+  display: none;
+}
+
+body.theme:has(#themeSwitch:checked) .theme{
+  background-color: #F00;
+}
+
