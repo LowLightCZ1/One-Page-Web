@@ -54,10 +54,11 @@ a{
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #111111f1;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    z-index: 5;
   }
 
   .header-sec.active a {
