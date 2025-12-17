@@ -1,9 +1,29 @@
-const menuToggle = document.getElementById("menuLogo");
-const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+
+
+function mobileNav() {
+  const section = document.getElementById("headerSec");
+
+  const button = document.createElement("button");
+  button.className = "closebtn";
+
+  section.appendChild(button);
+
+  const isActive = section.classList.contains("active");
+
+  if(!isActive){
+    section.classList.add("active");
+    button.textContent = "×"
+  }
+
+  button.addEventListener("click", () =>{
+    section.classList.remove("active");
+    button.remove(button);
+  });
+}
+
+
+
 
 
 // ---- SWITCHING JSON FILES -----//

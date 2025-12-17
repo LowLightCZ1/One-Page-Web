@@ -20,12 +20,15 @@
   grid-row: foto-row-start / foto-row-end;
 }
 
-section{
+#mainSec{
   border: 2px solid #000;
   display: flex;
 }
 
+.footer-info{
+  display: flex;
 
+}
 
 /* ----- ENGINE STYLES -----*/
 
@@ -44,6 +47,7 @@ section{
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   flex: 1;
   width: 50%;
   height: 50%;
@@ -138,4 +142,8 @@ p{
 
 .About-us{
   max-height: 100%;
+}
+
+h1{
+  text-align: center;
 }
