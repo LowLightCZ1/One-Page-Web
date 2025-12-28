@@ -31,8 +31,9 @@ body{
   grid-template-columns: [first-line] 1fr [second-line] 40fr [third-line] 1fr [end];
   grid-template-rows: [first-row] 3fr [main-row-start] 12fr [main-row-end] 1fr [foto-row-start] 4fr [foto-row-end] 1fr [footer-row-start] 2fr [footer-row-end];
   margin: 0px;
-  background: #e6f3ff;
-  background: linear-gradient(-30deg,#e4caed 0%, #e6f3ff 100%);
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease-in-out;
 }
 
 footer{
@@ -194,17 +195,20 @@ input[type = "text"] {
 #themeSwitch{
   width: 100%;
   height: 100%;
-  opacity: 0;
-  z-index: 1100;
   margin: 0;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 2000;
+  cursor: pointer;
 }
 
 .theme-icon{
-  right: 1rem;
-  bottom: 1rem;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
   width: 2rem;
   height: 2rem;
-  position: fixed;
   z-index: 1002;
 }
 
@@ -216,7 +220,20 @@ input[type = "text"] {
   display: none;
 }
 
-body.theme:has(#themeSwitch:checked) .theme{
-  background-color: #F00;
+:root{
+  --bg: linear-gradient(-30deg,#e4caed 0%, #e6f3ff 100%);
+  --text: #000000
 }
 
+body:has(#themeSwitch:checked) {
+  --bg: linear-gradient(-30deg, #000014 0%, #060620c9 100%);
+  --text: #e6f3ff
+}
+
+body:has(#themeSwitch:checked) #light {
+  display: none;
+}
+
+body:has(#themeSwitch:checked) #dark {
+  display: block;
+}
