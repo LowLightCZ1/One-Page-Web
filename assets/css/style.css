@@ -13,12 +13,13 @@ header{
   justify-items: center;
   grid-row: first-row / main-row-start;
   grid-column: first-line / end;
-  background-color: #fff;
+  background-color: var(--header);
+  transition: backround-color 0.4 ease-in-out; 
   margin: 1rem 2rem;
   border-radius: 16px;
   -webkit-box-shadow: 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
-  box-shadow: 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
   position: sticky;
   top: 8px;
   z-index: 1000;
@@ -89,11 +90,12 @@ img{
   height: 25px;
 }
 
-input[type = "text"] {
+input[type="text"] {
   height: 32px;
   width: 100%;
   margin-right: 10px;
   min-width: 0;
+  color: white;
 }
 
 /* ----- FOOTER INFO ----- */
@@ -134,7 +136,6 @@ input[type = "text"] {
     width: 50px;
     height: 50px;
     margin-right: 2rem;
-    background-color: #fff;
   }
 }
 
@@ -165,11 +166,13 @@ input[type = "text"] {
   background-color: transparent;
   border-radius: 15px;
   border: none;
-  -webkit-box-shadow: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: var(--input);
+  -moz-box-shadow: var(--input);
+  box-shadow: var(--input);
   padding: 0.5rem;
 }
+
+
 
 ::placeholder{
   color: #000;
@@ -213,27 +216,33 @@ input[type = "text"] {
 }
 
 #light{
-  z-index: 1003;
+  display: none;
 }
 
 #dark{
-  display: none;
+  z-index: 1003;
 }
 
 :root{
-  --bg: linear-gradient(-30deg,#e4caed 0%, #e6f3ff 100%);
-  --text: #000000
+  --bg: linear-gradient(-30deg, #000022 0%, #2b2b2b 100%);
+  --text: #e6f3ff;
+  --shadow: 8px 8px 40px -10px #0400d34d;
+  --header: #1d1629;
+  --input: inset 8px 8px 40px -10px rgba(0, 88, 219, 0.582);
 }
 
 body:has(#themeSwitch:checked) {
-  --bg: linear-gradient(-30deg, #000014 0%, #060620c9 100%);
-  --text: #e6f3ff
+  --bg: linear-gradient(-30deg,#e4caed 0%, #e6f3ff 100%);
+  --text: #000000;
+  --shadow: 8px 8px 40px -10px #0000004d;
+  --input: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.397);
+  --header: #fff;
 }
 
 body:has(#themeSwitch:checked) #light {
-  display: none;
+  display: block;
 }
 
 body:has(#themeSwitch:checked) #dark {
-  display: block;
+  display: none;
 }

@@ -3,6 +3,7 @@
 
 function mobileNav() {
   const section = document.getElementById("headerSec");
+  const href = document.querySelectorAll("a");
 
   const button = document.createElement("button");
   button.className = "closebtn";
@@ -25,6 +26,16 @@ function mobileNav() {
     section.classList.remove("active");
     button.remove(button);
   });
+
+  href.forEach(link =>{
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      section.classList.remove("active");
+      button.remove(button);
+    });
+  })
+
+
 
 
 }
