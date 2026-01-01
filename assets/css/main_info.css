@@ -142,8 +142,21 @@ p{
 
 .About-us{
   max-height: 100%;
+  display: flex;
 }
 
 h1{
   text-align: center;
+}
+
+.main-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#moreText {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
 }

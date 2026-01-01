@@ -16,7 +16,15 @@ fetch('../data/about.json')
 
     info.innerHTML =`
     <h1>${mainInfo.header}</h1> 
-    <p class = "mainInfo" id = "mainInfo">${mainInfo.main}</p>
+    <section class = "mainInfo" id = "mainInfo">
+        <h2 class = "h2$1">${mainInfo.h2$1}</h2>
+        <p class="p$1">${mainInfo.p$M}</p>
+        <span id = "moreText">
+            <h2 class = "h2$2">${mainInfo.h2$2}</h2>
+            <p class="p$O">${mainInfo.p$O}</p>
+        </span>
+
+    </section>
     <button id="textBtn" onclick="textBtnFunction()">Zobrazit více</button>`;
     
     div.appendChild(info);

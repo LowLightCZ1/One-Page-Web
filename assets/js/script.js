@@ -76,12 +76,18 @@ function textBtnFunction(){
   if(moreText.style.display === "none" && !isExpanded){
     aboutCon.classList.add("expanded")
     moreText.style.display = "inline";
-    textBtn.textContent = "Zobrazit Méně";
   }
   else{
     aboutCon.classList.remove("expanded")
-    moreText.style.display = "none";
+    moreText.style.display = "none";  
+  }
+
+  if (moreText.style.maxHeight) {
+    moreText.style.maxHeight = null;
     textBtn.textContent = "Zobrazit Více";
+  }else {
+    moreText.style.maxHeight = moreText.scrollHeight + "px";
+    textBtn.textContent = "Zobrazit Méně";
   }
 };
 
