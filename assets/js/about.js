@@ -19,13 +19,16 @@ fetch('../data/about.json')
     <section class = "mainInfo" id = "mainInfo">
         <h2 class = "h2$1">${mainInfo.h2$1}</h2>
         <p class="p$1">${mainInfo.p$M}</p>
-        <span id = "moreText">
+        <div id = "moreText" class = "more-text">
             <h2 class = "h2$2">${mainInfo.h2$2}</h2>
             <p class="p$O">${mainInfo.p$O}</p>
-        </span>
+        </div>
 
     </section>
-    <button id="textBtn" onclick="textBtnFunction()">Zobrazit více</button>`;
+    <button id="textBtn" class = "text-btn" onclick="textBtnFunction()">
+        <span class="btn-text">Zobrazit více</span>
+        <img src = "../assets/svg/arrow-down-svgrepo-com.svg" class = "arrow-img" alt = "arrow image">
+    </button>`;
     
     div.appendChild(info);
     section.appendChild(div);

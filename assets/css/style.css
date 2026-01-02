@@ -140,19 +140,6 @@ input[type="text"] {
 }
 
 
-/* ----- BACKROUND -----*/
-/* body{
-  background: linear-gradient(153deg, #ca0000, #a808c5, #541ad0);
-  background-size: 600% 600%;
-  animation: AnimationName 18s ease infinite;
-}
-
-@keyframes AnimationName {
-  0%{background-position:4% 0%}
-  50%{background-position:97% 100%}
-  100%{background-position:4% 0%}
-} */
-
 /* -----SCROLL BAR -----*/
 
 ::-webkit-scrollbar{
@@ -221,6 +208,7 @@ input[type="text"] {
 
 #dark{
   z-index: 1003;
+  filter: invert(100%);
 }
 
 :root{
@@ -229,6 +217,9 @@ input[type="text"] {
   --shadow: 8px 8px 40px -10px #0400d34d;
   --header: #1d1629;
   --input: inset 8px 8px 40px -10px rgba(0, 88, 219, 0.582);
+  --arrow: invert(100%);
+  --header_hover: #031d55;
+  --header_btn: #fff;
 }
 
 body:has(#themeSwitch:checked) {
@@ -237,6 +228,9 @@ body:has(#themeSwitch:checked) {
   --shadow: 8px 8px 40px -10px #0000004d;
   --input: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.397);
   --header: #fff;
+  --arrow: invert(0%);
+  --header_hover: #f1f1f1;
+  --header_btn: #000;
 }
 
 body:has(#themeSwitch:checked) #light {
@@ -245,4 +239,5 @@ body:has(#themeSwitch:checked) #light {
 
 body:has(#themeSwitch:checked) #dark {
   display: none;
+
 }

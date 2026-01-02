@@ -30,17 +30,25 @@
 
 }
 
+@media screen and (max-width:900px) {
+  .mainContainer{
+    height: 700px;
+  }
+}
+
 /* ----- ENGINE STYLES -----*/
 
 @media screen and (max-width:900px) {
   .engine-section{
     flex-direction: column;
+    height: 100%;
   }
 }
 
 .engine-section{
   justify-content: center;
   align-items: center;
+  
 }
 
 .Engine{
@@ -155,8 +163,34 @@ h1{
   align-items: center;
 }
 
-#moreText {
+.more-text {
   overflow: hidden;
+  opacity: 0;
   max-height: 0;
   transition: max-height 0.5s ease;
+}
+
+.more-text.open {
+  opacity: 1;
+}
+
+.text-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+}
+
+.arrow-img {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+  filter: var(--arrow);
+}
+
+.text-btn.open .arrow-img {
+  transform: rotate(180deg);
 }

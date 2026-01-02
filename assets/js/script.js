@@ -69,25 +69,24 @@ function textBtnFunction(){
   const moreText = document.getElementById("moreText");
   const textBtn = document.getElementById("textBtn"); 
   const aboutCon = document.getElementById("aboutUs");
+  const btnText = textBtn.querySelector(".btn-text");
   if (!textBtn || !moreText) return;
 
-  const isExpanded = moreText.classList.contains("expanded");
+  const isOpen = moreText.classList.contains("open");
 
-  if(moreText.style.display === "none" && !isExpanded){
-    aboutCon.classList.add("expanded")
-    moreText.style.display = "inline";
+  if(!isOpen){
+    moreText.classList.add("open");
+    textBtn.classList.add("open");
+    moreText.style.maxHeight = moreText.scrollHeight + "px";
+    btnText.textContent = "Zobrazit Méně";
+    aboutCon?.classList.add("expanded");
   }
   else{
-    aboutCon.classList.remove("expanded")
-    moreText.style.display = "none";  
-  }
-
-  if (moreText.style.maxHeight) {
-    moreText.style.maxHeight = null;
-    textBtn.textContent = "Zobrazit Více";
-  }else {
-    moreText.style.maxHeight = moreText.scrollHeight + "px";
-    textBtn.textContent = "Zobrazit Méně";
+    aboutCon?.classList.remove("expanded")
+    moreText.classList.remove("open")
+    textBtn.classList.remove("open")
+    moreText.style.maxHeight = "0";
+    btnText.textContent = "Zobrazit Více";
   }
 };
 
