@@ -1,21 +1,24 @@
 [
     {
-        "ikona": "../assets/svg/unity-svgrepo-com.svg",
+        "icon": "../assets/svg/unity-svgrepo-com.svg",
         "name" : "Unity",
-        "popis" : "Engine pro tvorbu 2D i 3D her"
+        "small$des" : "Engine pro tvorbu 2D i 3D her",
+        "big$des":""
         
     },
 
     {
-        "ikona" : "../assets/svg/unreal-engine-svgrepo-com.svg",
+        "icon" : "../assets/svg/unreal-engine-svgrepo-com.svg",
         "name" : "Unreal Engine",
-        "popis" : "Engine pro tvorbu hlavně 3D her"
+        "small$des" : "Engine pro tvorbu hlavně 3D her",
+        "big$des":""
     },
 
     {
-        "ikona" : "../assets/svg/godot-engine-svgrepo-com.svg",
+        "icon" : "../assets/svg/godot-engine-svgrepo-com.svg",
         "name" : "Godot",
-        "popis" : "Engine používající Phyton"
+        "small$des" : "Engine používající Phyton",
+        "big$des":""
     }
 
 

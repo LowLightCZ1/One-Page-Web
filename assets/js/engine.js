@@ -12,7 +12,10 @@ fetch('../data/engine.json')
         div.className = "Engine";
         div.id = "engineCon";
 
-        const ikona = engine.ikona||"fdthdfh"
+        const ikona = engine.icon||"fdt1dfh";
+        const name = engine.name||"fdt2dfh";
+        const smallDes = engine.small$des||"fdt3dfh";
+        const bigDes = engine.big$des||"fdt4dfh";
 
         div.innerHTML = `<img src="${ikona}" class="icon" /> ` ;
         
@@ -20,9 +23,15 @@ fetch('../data/engine.json')
         info.className = "info";
 
         info.innerHTML =`
-        <h3>${engine.name}</h3> 
-        <p>Popis: ${engine.popis}</p>
-        <button id="engineBtn" onclick="engineBtnFunction(this)">Zobrazit více</button>`;
+        <h3>${name}</h3> 
+        <p>Popis: ${smallDes}</p>
+        <div class = "engine-text">
+            <p>Info: ${bigDes}</p>
+        </div>
+        <button id="engineBtn" class ="engine-btn" onclick="engineBtnFunction(this)">
+            <span class = "btn-text">Zobrazit více</span>
+            <img src = "../assets/svg/arrow-down-svgrepo-com.svg" class = "arrow-img" alt = "arrow image">
+        </button>`;
 
         div.appendChild(info);
         section.appendChild(div);

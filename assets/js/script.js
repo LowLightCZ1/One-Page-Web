@@ -97,28 +97,34 @@ function engineBtnFunction(button){
   const container = engineCard.parentElement;
   const infoCards = container.querySelectorAll(".Engine");
 
-  const isExpanded = engineCard.classList.contains("expanded");
+  const btnText = button.querySelector(".btn-text");
+  const engineTextDiv = engineCard.querySelector(".engine-text");
+
+  const isOpen = engineTextDiv.classList.contains("open");
 
   const section = document.getElementById("mainSec");
 
-  if(isExpanded){
+  engineTextDiv.classList.toggle("open");
+  button.classList.toggle("open");
+
+
+  if(isOpen){
     engineCard.classList.remove("expanded");
     infoCards.forEach(c => c.style.display = "flex");
-    button.textContent = "Zobrazit více";
     section.style.width = "auto";
-    section.style.height = "auto";
+    section.style.height = "none";
+    btnText.textContent = "Zobrazit více"
   }
   else{
     infoCards.forEach(c => {
       if (c !== engineCard) c.style.display = 'none';
     });
     engineCard.classList.add("expanded")
-    button.textContent = "Zobrazit méně";
     section.style.width = "100%";
     section.style.height = "100%";
     section.style.border = "none"
+    btnText.textContent = "Zobrazit méně"
   }
-
 
 
 };
