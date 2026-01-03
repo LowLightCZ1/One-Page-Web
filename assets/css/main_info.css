@@ -46,9 +46,10 @@
 }
 
 .engine-section{
-  justify-content: center;
-  align-items: center;
-  
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+  overflow: hidden;
 }
 
 .engine-text {
@@ -70,25 +71,39 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
+  flex: 1 1 auto;
   width: 50%;
   height: 50%;
   border-radius: 15px;
   overflow: hidden;
   background: #ccc;
-  margin: 15px;
   position: relative;
   transition: 0.4s ease-out;
   z-index: 1;
+  min-width: 0;
+  transition: opacity 0.5s ease-in-out, flex-basis 0.5s ease-in-out, transform 0.1s ease-in-out; 
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: left center; 
+  box-sizing: border-box;
 }
 
-.Engine.expanded{
-  position: absolute;
-  width: 95%;
-  height: 100%;
+.Engine.hidden{
+  opacity: 0;
+  transform: scale(0.9);
+  flex: 0 0 0px; 
+  pointer-events: none;
+}
+
+.Engine.expanded {
+  flex: 3; 
+  width: auto;
+  height: auto;
   z-index: 3;
-  flex: none;
-  transform: scale(1.02);
+}
+
+.Engine.expanded .icon{
+  height: 80%;
 }
 
 @media screen and (min-width:900px) 

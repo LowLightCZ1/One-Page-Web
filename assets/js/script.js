@@ -110,23 +110,22 @@ function engineBtnFunction(button){
 
   if(isOpen){
     engineCard.classList.remove("expanded");
-    infoCards.forEach(c => c.style.display = "flex");
+    infoCards.forEach(c => {c.classList.remove("hidden"); c.style.transition = 'none'; c.style.transition = ''; });
+    void engineCard.offsetWidth;
     section.style.width = "auto";
-    section.style.height = "none";
+    section.style.height = "auto";
     btnText.textContent = "Zobrazit více"
   }
   else{
     infoCards.forEach(c => {
-      if (c !== engineCard) c.style.display = 'none';
+      if (c !== engineCard) c.classList.add("hidden");
     });
     engineCard.classList.add("expanded")
-    section.style.width = "100%";
-    section.style.height = "100%";
-    section.style.border = "none"
+    section.style.width = "90%";
+    section.style.height = "90%";
+    section.style.border = ""
     btnText.textContent = "Zobrazit méně"
-  }
-
-
+  };
 };
 
 
