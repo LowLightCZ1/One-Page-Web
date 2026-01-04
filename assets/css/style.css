@@ -221,6 +221,7 @@ input[type="text"] {
   --header_hover: #031d55;
   --header_btn: #fff;
   interpolate-size: allow-keywords; 
+  --backround_hover: rgba(255, 255, 255, 0.3);
 }
 
 body:has(#themeSwitch:checked) {
@@ -232,6 +233,7 @@ body:has(#themeSwitch:checked) {
   --arrow: invert(0%);
   --header_hover: #f1f1f1;
   --header_btn: #000;
+  --backround_hover:rgba(0, 0, 0, 0.3) ;
 }
 
 body:has(#themeSwitch:checked) #light {

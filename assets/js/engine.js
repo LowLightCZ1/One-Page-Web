@@ -12,10 +12,10 @@ fetch('../data/engine.json')
         div.className = "Engine";
         div.id = "engineCon";
 
-        const ikona = engine.icon||"fdt1dfh";
-        const name = engine.name||"fdt2dfh";
-        const smallDes = engine.small$des||"fdt3dfh";
-        const bigDes = engine.big$des||"fdt4dfh";
+        const ikona = engine.icon||"...";
+        const name = engine.name||"...";
+        const smallDes = engine.small$des||"...";
+        const bigDes = engine.big$des||"...";
 
         div.innerHTML = `<img src="${ikona}" class="icon" /> ` ;
         
