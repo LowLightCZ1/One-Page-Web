@@ -41,7 +41,8 @@
 @media screen and (max-width:900px) {
   .engine-section{
     flex-direction: column;
-    height: 100%
+    height: 100%;
+    align-items: center !important;
   }
 }
 
@@ -114,7 +115,7 @@
 .Engine.expanded:before {
   display: none !important; /*Tags that are trua after axpanded card*/
   opacity: 0 !important;
-  
+  background: var(--backround_hover)
 }
 
 .Engine.expanded .info {
@@ -140,7 +141,7 @@
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    background: var(--backround_hover);
+    background: rgb(0, 0, 0, 0.4);
     z-index: 2;
     transition: 0.5s;
     opacity: 0;
@@ -261,4 +262,20 @@ h1{
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.info-text{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h2ß1, .h2ß2 {
+  text-align: center;
+}
+
+.pß1,.pß2,.pß3, .pßO{
+  margin: 5px;
+  text-align: center;
 }

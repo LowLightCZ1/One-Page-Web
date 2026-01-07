@@ -17,6 +17,11 @@ fetch('../data/survey.json')
     info.innerHTML = `
     <h2>${surveyInfo.header}</h2>
     <p>${surveyInfo.info}</p>
+
+    <form action = "../php/test.php" method = "POST">
+       Text <input type = "text" id = "testText" name = "text"> 
+        <input type = "submit">  
+    </form>
     `;
 
     div.appendChild(info);

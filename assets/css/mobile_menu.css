@@ -3,15 +3,35 @@
 .header-sec{
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: transparent;
+  gap: 30px;
 } 
 
 a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-weight: bold;
   color: var(--text);
+  transition-duration: 0.4s;
+}
+
+@media screen and (min-width: 900px) {
+  a{
+    height: 40px;
+    width: 110px;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+  }
+
+  a:hover{
+    background: #126db8;
+    cursor: pointer;
+  }
+
 }
 
 .header-sec.active a:hover {

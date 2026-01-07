@@ -1,8 +1,10 @@
 {
     "header" : "HERNÍ ENGINY",
-    "h2$1": "ZDRAVÍM VŠECHNY NAVŠTĚVNÍKY",
-    "p$M": "Na této stránce se dozvíte spoustu zajímavích a užitečných věcí o herních enginech, jejich historii. Najdete zde také nazorné ukazky a fotky. Na ukázku jsou uvedeny jen tři enginy, ale v horní liště si můžete vyhledat, jaký engine budete chtít. Také můžete vyplnit dotazník, který slouží jako zpětná vazba.",
-    "h2$2": "OSOBNÍ ŘEČ",
-    "p$O": "Zde bych chtěl jen říc, že toto je můj zatím nejambicijoznější webový projekt. Budu velice rád když si něco odsud odnesete."
+    "h2ß1": "VŠECHM NAVŠTĚVNÍKŮM",
+    "pßM1": "Na této stránce najdete spoustu zajímavích a užitečných věcí o herních enginech.",
+    "pßM2": "Dozvíte se zde něco z historie, jak si každý engine stáhnout a také nějaké začátecnické videa. Po případě můžete i viplnit dotazník.",
+    "pßM3": "Pod touto sekcí josu i dostupné galerie fotek z výbraných enginů.",
+    "h2ß2": "OSOBNÍ ŘEČ",
+    "pßO": "Zde bych chtěl jen říc, že toto je můj zatím nejambicijoznější webový projekt. Budu velice rád když si něco odsud odnesete."
 
 }

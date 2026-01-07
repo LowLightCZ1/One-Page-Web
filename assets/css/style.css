@@ -13,8 +13,8 @@ header{
   justify-items: center;
   grid-row: first-row / main-row-start;
   grid-column: first-line / end;
-  background-color: var(--header);
-  transition: backround-color 0.4 ease-in-out; 
+  background: var(--header);
+  transition: background 0.3s ease-in-out; 
   margin: 1rem 2rem;
   border-radius: 16px;
   -webkit-box-shadow: 8px 8px 40px -10px rgba(0, 0, 0, 0.3);
@@ -34,7 +34,7 @@ body{
   margin: 0px;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.4s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 
 footer{
@@ -65,13 +65,13 @@ footer{
 
 #headerContainer{
   grid-column: line2 / midle-line;
-  width: 75%;
+  width: auto;
   height: 75%;
   align-self: center;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
+
 
 #searchBar{
   grid-column: midle-line / end;
@@ -97,6 +97,7 @@ input[type="text"] {
   min-width: 0;
   color: white;
 }
+
 
 /* ----- FOOTER INFO ----- */
 

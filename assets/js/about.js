@@ -17,13 +17,16 @@ fetch('../data/about.json')
     info.innerHTML =`
     <h1>${mainInfo.header}</h1> 
     <section class = "mainInfo" id = "mainInfo">
-        <h2 class = "h2$1">${mainInfo.h2$1}</h2>
-        <p class="p$1">${mainInfo.p$M}</p>
-        <div id = "moreText" class = "more-text">
-            <h2 class = "h2$2">${mainInfo.h2$2}</h2>
-            <p class="p$O">${mainInfo.p$O}</p>
+        <div class = "info-text" id = "infoText">
+            <h2 class = "h2ß1">${mainInfo.h2ß1}</h2>
+            <p class="pß1">${mainInfo.pßM1}</p>
+            <p class="pß2">${mainInfo.pßM2}</p>
+            <p class="pß3">${mainInfo.pßM3}</p>
         </div>
-
+        <div id = "moreText" class = "more-text">
+            <h2 class = "h2ß2">${mainInfo.h2ß2}</h2>
+            <p class="pßO">${mainInfo.pßO}</p>
+        </div>
     </section>
     <button id="textBtn" class = "text-btn" onclick="textBtnFunction()">
         <span class="btn-text">Zobrazit více</span>
