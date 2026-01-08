@@ -7,24 +7,25 @@ fetch('../data/survey.json')
 
     section.innerHTML = '';
 
-    const div = document.createElement("div");
-    div.className = "surveyInfo";
-    div.id = "surveyInfo";
-
     const info = document.createElement("div");
     info.className = "survey-info";
+    info.id = "surveyInfo"
 
     info.innerHTML = `
-    <h2>${surveyInfo.header}</h2>
+    <h2 class = "h2ß1">${surveyInfo.h2ß1}</h2>
     <p>${surveyInfo.info}</p>
 
-    <form action = "../php/test.php" method = "POST">
-       Text <input type = "text" id = "testText" name = "text"> 
-        <input type = "submit">  
-    </form>
+    <div class = "survey-div" id = "surveyDiv">
+        <form id = "surveyForm" onsubmit="return false;">
+            <input type = "text" name = "text" required class = "survey-text">
+            <input type = "submit" value = "Odeslat">
+        </form>
+
+        <div id="response" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
     `;
 
-    div.appendChild(info);
-    section.appendChild(div);
+    
+    section.appendChild(info);
 })
 .catch(error => console.error("Chyba při načítání JSON:", error));

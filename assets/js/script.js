@@ -130,5 +130,34 @@ function engineBtnFunction(button){
   };
 };
 
+// ----- PHP SURVEY ------ //
 
+document.addEventListener('submit', function(e) {
 
+  const surveyDiv = document.getElementById("surveyDiv");
+  if (e.target && e.target.id === 'surveyForm') {
+    e.preventDefault(); // Zamezí obnovení stránky
+
+    const form = e.target;
+    const responseDiv = document.getElementById('response');
+    
+    const formData = new FormData(form);
+    
+    fetch('../php/test.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => {
+      if (!res.ok) throw new Error('Chyba serveru');
+      return res.text();
+    })
+    .then(data => {
+      responseDiv.innerHTML = data;
+    })
+    .catch(err => {
+      console.error('Chyba:', err);
+      responseDiv.innerHTML = "Došlo k chybě při odesílání.";
+    });
+  }
+  surveyDiv.innerHTML = `<h2> Děkuji za odeslání.</h2>`;
+});

@@ -1,12 +1,26 @@
-<?php
-// Save this as display.php
-
-// Check if the form was actually submitted
+<?php  
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the text using the 'name' attribute from the HTML
-    $text = $_POST['text'];
-
-    // Display the text
-    echo "You typed: " . htmlspecialchars($text);
+    $newEntry = ["text" => $_POST['text']];
 }
+$fileName = '../data/info.json';
+
+// Načtení existujících dat nebo vytvoření prázdného pole
+if (file_exists($fileName)) {
+    $currentData = json_decode(file_get_contents($fileName), true);
+} else {
+    $currentData = [];
+}
+
+// Přidání nové odpovědi
+$currentData[] = $newEntry;
+
+// Uložení zpět
+file_put_contents($fileName, json_encode($currentData, JSON_PRETTY_PRINT));
+
+if ($fileName) {
+    echo "Soubor $fileName byl úspěšně vytvořen.";
+} else {
+    echo "Došlo k chybě při zápisu souboru.";
+}
+
 ?>

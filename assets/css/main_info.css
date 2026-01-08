@@ -279,3 +279,27 @@ h1{
   margin: 5px;
   text-align: center;
 }
+
+/* ----- SURVEY -----*/
+
+.survey-info{
+  display: flex;
+  flex-direction: column;
+}
+
+#surveyForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.survey-text{
+  height: 300px !important;
+  border: 3px solid #555;
+  border-radius: 0.5rem;
+  margin: 0 !important;
+}
+
+.survey-text[type = "text"]{
+  color: #000;
+  text-align: start;
+}
