@@ -3,6 +3,31 @@
   box-sizing: border-box;
 }
 
+:root{
+  --bg: linear-gradient(-30deg, #000022 0%, #2b2b2b 100%);
+  --text: #e6f3ff;
+  --shadow: 8px 8px 40px -10px #0400d34d;
+  --header: #1d1629;
+  --input: inset 8px 8px 40px -10px rgba(0, 88, 219, 0.582);
+  --arrow: invert(100%);
+  --header_hover: #031d55;
+  --header_btn: #fff;
+  interpolate-size: allow-keywords; 
+  --backround_hover: rgba(255, 255, 255, 0.3);
+}
+
+body:has(#themeSwitch:checked) {
+  --bg: linear-gradient(-30deg,#e4caed 0%, #e6f3ff 100%);
+  --text: #000000;
+  --shadow: 8px 8px 40px -10px #0000004d;
+  --input: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.397);
+  --header: #fff;
+  --arrow: invert(0%);
+  --header_hover: #f1f1f1;
+  --header_btn: #000;
+  --backround_hover:rgba(0, 0, 0, 0.3) ;
+}
+
 header{
   width: auto;
   height: 12vh;
@@ -30,7 +55,7 @@ body{
   height: 200vh;
   display: grid;
   grid-template-columns: [first-line] 1fr [second-line] 40fr [third-line] 1fr [end];
-  grid-template-rows: [first-row] 3fr [main-row-start] 12fr [main-row-end] 1fr [foto-row-start] 4fr [foto-row-end] 1fr [footer-row-start] 2fr [footer-row-end];
+  grid-template-rows: [first-row] 3fr [main-row-start] 10fr [main-row-end] 1.5fr [tab-row] 1fr [foto-row-start] 4fr [foto-row-end] 1fr [footer-row-start] 2fr [footer-row-end];
   margin: 0px;
   background: var(--bg);
   color: var(--text);
@@ -212,30 +237,7 @@ input[type="text"] {
   filter: invert(100%);
 }
 
-:root{
-  --bg: linear-gradient(-30deg, #000022 0%, #2b2b2b 100%);
-  --text: #e6f3ff;
-  --shadow: 8px 8px 40px -10px #0400d34d;
-  --header: #1d1629;
-  --input: inset 8px 8px 40px -10px rgba(0, 88, 219, 0.582);
-  --arrow: invert(100%);
-  --header_hover: #031d55;
-  --header_btn: #fff;
-  interpolate-size: allow-keywords; 
-  --backround_hover: rgba(255, 255, 255, 0.3);
-}
 
-body:has(#themeSwitch:checked) {
-  --bg: linear-gradient(-30deg,#e4caed 0%, #e6f3ff 100%);
-  --text: #000000;
-  --shadow: 8px 8px 40px -10px #0000004d;
-  --input: inset 8px 8px 40px -10px rgba(0, 0, 0, 0.397);
-  --header: #fff;
-  --arrow: invert(0%);
-  --header_hover: #f1f1f1;
-  --header_btn: #000;
-  --backround_hover:rgba(0, 0, 0, 0.3) ;
-}
 
 body:has(#themeSwitch:checked) #light {
   display: block;

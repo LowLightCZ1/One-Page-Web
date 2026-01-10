@@ -50,8 +50,35 @@
         </section>
     </div>
 
+    <div class="tab-switcher" id="tabSwitcher">
+        <button class = "unity-btn" onclick="showGallery('gallery1')">Unity</button>
+        <button class = "unreal-btn" onclick="showGallery('gallery2')">Unreal</button>
+        <button class = "godot-btn" onclick="showGallery('gallery3')">Godot</button>
+
+
+    </div>
+
     <div id="fotoContainer" class="fotoContainer">
 
+        <div id="gallery1" class="gallery-cont active">
+            <img src="../assets/engine_img/godot/godot-1.webp" alt="godot img 1">
+            <img src="../assets/engine_img/godot/godot-2.webp" alt="godot img 2">
+            <img src="../assets/engine_img/godot/godot-3.jpg" alt="godot img 3">
+            <img src="../assets/engine_img/godot/godot-4.webp" alt="godot img 4">
+            <img src="../assets/engine_img/godot/godot-5.png" alt="godot img 5">
+        </div>
+        <div id="gallery2" class="gallery-cont" >
+            <img src="../assets/engine_img/godot/godot-1.webp" alt="godot img 1">
+            <img src="../assets/engine_img/godot/godot-2.webp" alt="godot img 2">
+            <img src="../assets/engine_img/godot/godot-3.jpg" alt="godot img 3">
+            <img src="../assets/engine_img/godot/godot-5.png" alt="godot img 5">
+        </div>
+        <div id="gallery3" class="gallery-cont" >
+            <img src="../assets/engine_img/godot/godot-1.webp" alt="godot img 1">
+            <img src="../assets/engine_img/godot/godot-2.webp" alt="godot img 2">
+            <img src="../assets/engine_img/godot/godot-3.jpg" alt="godot img 3">
+            <img src="../assets/engine_img/godot/godot-4.webp" alt="godot img 4">
+        </div>
     </div>
 
     <footer>

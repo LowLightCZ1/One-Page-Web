@@ -161,3 +161,18 @@ document.addEventListener('submit', function(e) {
   }
   surveyDiv.innerHTML = `<h2> Děkuji za odeslání.</h2>`;
 });
+
+// ----- GALLERY SWITCH ----- //
+
+function showGallery(galleryId) {
+    // Get all elements with the class 'gallery-container'
+    const galleries = document.getElementsByClassName('gallery-cont');
+
+    // Loop through them and remove the 'active' class from all
+    for (var i = 0; i < galleries.length; i++) {
+        galleries[i].classList.remove('active');
+    }
+
+    // Add the 'active' class to the specific gallery you want to show
+    document.getElementById(galleryId).classList.add('active');
+}
