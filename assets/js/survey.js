@@ -17,7 +17,7 @@ fetch('../data/survey.json')
 
     <div class = "survey-div" id = "surveyDiv">
         <form id = "surveyForm" onsubmit="return false;">
-            <input type = "text" name = "text" required class = "survey-text">
+            <textarea name = "text" class = "survey-text" rows = "4" cols = "50"></textarea>
             <input type = "submit" value = "Odeslat">
         </form>
 

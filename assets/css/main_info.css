@@ -287,6 +287,10 @@ h1{
   flex-direction: column;
 }
 
+.survey-div h2{
+  text-align: center;
+}
+
 #surveyForm{
   display: flex;
   flex-direction: column;
@@ -294,9 +298,11 @@ h1{
 
 .survey-text{
   height: 300px !important;
+  width: 600px !important;
   border: 3px solid #555;
   border-radius: 0.5rem;
   margin: 0 !important;
+  resize: none;
 }
 
 .survey-text[type = "text"]{
