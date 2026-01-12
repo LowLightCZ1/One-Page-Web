@@ -14,6 +14,7 @@
   --header_btn: #fff;
   interpolate-size: allow-keywords; 
   --backround_hover: rgba(255, 255, 255, 0.3);
+  --bg_a: #2b1750;
 }
 
 body:has(#themeSwitch:checked) {

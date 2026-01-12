@@ -25,7 +25,6 @@ fetch('../data/survey.json')
     </div>
     `;
 
-    
     section.appendChild(info);
 })
 .catch(error => console.error("Chyba při načítání JSON:", error));
