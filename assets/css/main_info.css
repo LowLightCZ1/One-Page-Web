@@ -46,6 +46,7 @@
   position: relative;
   opacity: 1;
   pointer-events: auto;
+  gap: 0;
 }
 
 .gallery-cont img {
@@ -54,21 +55,23 @@
   display: block;
 }
 
-.gallery-cont.active:nth-child(2){
-  transform: scale(40px, 40px);
+.gallery-cont.active img{
+  height: 286.288px;
+  width: 215.618px;
+  overflow: hidden;
+}
+
+.gallery-cont.active img:nth-child(2){
   border-radius: 1rem;
   z-index: 2;
 }
-.gallery-cont.active:nth-child(3){
-  transform: scale(40px, 40px);
+.gallery-cont.active img:nth-child(3){
   z-index: 3;
 }
-.gallery-cont.active:nth-child(4){
-  transform: scale(40px, 40px);
+.gallery-cont.active img:nth-child(4){
   z-index: 4;
 }
-.gallery-cont.active:nth-child(5){
-  transform: scale(40px, 40px);
+.gallery-cont.active img:nth-child(5){
   z-index: 5;
 }
 
