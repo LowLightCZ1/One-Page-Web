@@ -62,7 +62,6 @@
 
         <div id="gallery1" class="gallery-cont active">
             <img src="../assets/engine_img/godot/godot-1.webp" alt="godot img 1">
-            <img src="../assets/engine_img/godot/godot-2.webp" alt="godot img 2">
             <img src="../assets/engine_img/godot/godot-3.jpg" alt="godot img 3">
             <img src="../assets/engine_img/godot/godot-4.webp" alt="godot img 4">
             <img src="../assets/engine_img/godot/godot-5.png" alt="godot img 5">

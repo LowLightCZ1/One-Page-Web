@@ -13,7 +13,6 @@
 }
 
 .fotoContainer{
-  border: 2px solid #000;
   width: 100%;
   height: 100%;
   grid-column: second-line / third-line;
@@ -29,7 +28,7 @@
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1.25fr;
   gap: 10px;
-  margin-top: 10px;
+  margin: 0 ;
 
   position: absolute;
   top: 0;
@@ -47,6 +46,8 @@
   opacity: 1;
   pointer-events: auto;
   gap: 0;
+  width: auto;
+  margin-left: 10%;
 }
 
 .gallery-cont img {
@@ -57,13 +58,22 @@
 
 .gallery-cont.active img{
   height: 286.288px;
-  width: 215.618px;
+  width: auto;
   overflow: hidden;
+  border-radius: 0.5rem;
+  
+}
+
+
+.gallery-cont.active img::before{
+  content: "";
 }
 
 .gallery-cont.active img:nth-child(2){
-  border-radius: 1rem;
   z-index: 2;
+  background-image: url("/assets/engine_img/godot/godot-3.jpg");
+  background-color: #5555;
+  background-blend-mode: multiply;
 }
 .gallery-cont.active img:nth-child(3){
   z-index: 3;
@@ -185,7 +195,7 @@
 }
 
 .Engine.expanded:before {
-  display: none !important; /*Tags that are trua after axpanded card*/
+  display: none !important; 
   opacity: 0 !important;
   background: var(--backround_hover)
 }
